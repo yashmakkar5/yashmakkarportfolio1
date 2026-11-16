@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Mascot from "@/components/Mascot";
 import MusicPlayer from "@/components/MusicPlayer";
 import ScrollProgress from "@/components/ScrollProgress";
 
@@ -75,7 +74,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <Mascot />
         <MusicPlayer />
       </body>
     </html>

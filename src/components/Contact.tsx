@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Github, Linkedin, Award, Copy, Check, Send, ArrowUpRight, MessageSquare, Terminal, ExternalLink } from "lucide-react";
+import { Mail, Github, Linkedin, Award, Copy, Check, Send, ArrowUpRight, MessageSquare, Terminal, ExternalLink, MessageCircle, PhoneCall } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { configuredSocials } from "@/data/socials";
 
@@ -10,6 +10,9 @@ const iconMap: Record<string, React.ElementType> = {
   Linkedin,
   Award,
   Mail,
+  PhoneCall,
+  MessageCircle,
+  MessageSquare,
 };
 
 export default function Contact() {
@@ -99,6 +102,38 @@ export default function Contact() {
                 >
                   <Mail className="h-3.5 w-3.5 text-crimson-400" />
                   <span>Launch Mail Client</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Direct WhatsApp Chat Card */}
+            <div className="rounded-3xl border border-emerald-900/60 bg-emerald-950/20 p-6 sm:p-8 backdrop-blur-xl">
+              <div className="flex items-center justify-between mb-2">
+                <span className="block text-[10px] font-mono uppercase tracking-widest text-emerald-400">
+                  Instant Messaging // Fast Response
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full bg-emerald-950 border border-emerald-800/80 px-2 py-0.5 text-[10px] font-mono text-emerald-300">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  AVAILABLE
+                </span>
+              </div>
+              <p className="font-editorial text-xl sm:text-2xl font-bold text-white mb-2">
+                WhatsApp Direct Chat
+              </p>
+              <p className="text-xs text-zinc-400 font-sans mb-5 leading-relaxed">
+                Connect directly for rapid technical consultations, project inquiries, or real-time communication.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={profileData.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-white shadow-[0_0_20px_rgba(16,185,129,0.35)] hover:bg-emerald-500 transition active:scale-95"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  <span>Open WhatsApp Chat</span>
+                  <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
               </div>
             </div>

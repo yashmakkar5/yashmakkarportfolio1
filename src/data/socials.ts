@@ -37,6 +37,15 @@ export const socialLinks: SocialLink[] = [
     primary: true
   },
   {
+    id: "whatsapp",
+    name: "WhatsApp",
+    url: "https://wa.me/919888888888?text=Hi%20Yash,%20saw%20your%20portfolio!",
+    displayHandle: "Direct Message",
+    icon: "PhoneCall",
+    description: "Instant chat, quick inquiries, and real-time collaboration",
+    primary: true
+  },
+  {
     id: "email",
     name: "Email",
     url: "mailto:yyaasshh555@gmail.com",

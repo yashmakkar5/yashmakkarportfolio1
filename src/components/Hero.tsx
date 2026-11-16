@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Sparkles, Terminal, ShieldCheck, Compass } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Sparkles, Terminal, ShieldCheck, Compass, Github, Linkedin, Mail, MessageCircle, Award } from "lucide-react";
 import { profileData } from "@/data/profile";
 
 export default function Hero() {
@@ -80,13 +80,80 @@ export default function Hero() {
               &ldquo;{profileData.tagline}&rdquo;
             </p>
 
-            <p className="text-sm text-zinc-400 leading-relaxed max-w-xl mb-10 border-l-2 border-crimson-600/60 pl-4 py-1">
+            <p className="text-sm text-zinc-400 leading-relaxed max-w-xl mb-7 border-l-2 border-crimson-600/60 pl-4 py-1">
               Undergraduate engineer at CUIET, Chitkara University specializing in{" "}
               <span className="text-zinc-200 font-medium">Agentic AI</span>,{" "}
               <span className="text-zinc-200 font-medium">Multi-Agent Systems</span>, and{" "}
               <span className="text-zinc-200 font-medium">Full-Stack Distributed Applications</span>.
               Turning cognitive LLM workflows into reliable, scalable software.
             </p>
+
+            {/* Direct Points of Contact Strip */}
+            <div className="mb-8 flex flex-col gap-2.5">
+              <span className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-crimson-500 animate-pulse" />
+                Direct Points of Contact // Verified
+              </span>
+              <div className="flex flex-wrap items-center gap-2.5">
+                <a
+                  href="https://github.com/yashmakkar5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-zinc-800 bg-obsidian-900/90 px-3.5 py-2 font-mono text-xs text-zinc-300 backdrop-blur-md transition-all hover:border-crimson-600 hover:text-white hover:bg-obsidian-850"
+                  title="GitHub Profile"
+                >
+                  <Github className="h-4 w-4 text-crimson-500" />
+                  <span>GitHub</span>
+                  <ArrowUpRight className="h-3 w-3 text-zinc-600" />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/yashmakkar5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-zinc-800 bg-obsidian-900/90 px-3.5 py-2 font-mono text-xs text-zinc-300 backdrop-blur-md transition-all hover:border-crimson-600 hover:text-white hover:bg-obsidian-850"
+                  title="LinkedIn Profile"
+                >
+                  <Linkedin className="h-4 w-4 text-sky-400" />
+                  <span>LinkedIn</span>
+                  <ArrowUpRight className="h-3 w-3 text-zinc-600" />
+                </a>
+
+                <a
+                  href={profileData.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-emerald-900/70 bg-emerald-950/40 px-3.5 py-2 font-mono text-xs text-emerald-300 backdrop-blur-md transition-all hover:border-emerald-500 hover:text-emerald-200 hover:bg-emerald-950/70 shadow-[0_0_12px_rgba(16,185,129,0.15)]"
+                  title="WhatsApp Direct Chat"
+                >
+                  <MessageCircle className="h-4 w-4 text-emerald-400" />
+                  <span>WhatsApp</span>
+                  <ArrowUpRight className="h-3 w-3 text-emerald-500" />
+                </a>
+
+                <a
+                  href={`mailto:${profileData.contactEmail}`}
+                  className="inline-flex items-center gap-2 rounded-xl border border-zinc-800 bg-obsidian-900/90 px-3.5 py-2 font-mono text-xs text-zinc-300 backdrop-blur-md transition-all hover:border-crimson-600 hover:text-white hover:bg-obsidian-850"
+                  title="Direct Email"
+                >
+                  <Mail className="h-4 w-4 text-crimson-400" />
+                  <span>Email</span>
+                  <ArrowUpRight className="h-3 w-3 text-zinc-600" />
+                </a>
+
+                <a
+                  href="https://github.com/yashmakkar5/credentials-portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-zinc-800 bg-obsidian-900/90 px-3.5 py-2 font-mono text-xs text-zinc-300 backdrop-blur-md transition-all hover:border-crimson-600 hover:text-white hover:bg-obsidian-850"
+                  title="Credentials Repository"
+                >
+                  <Award className="h-4 w-4 text-yellow-500" />
+                  <span>Credentials</span>
+                  <ArrowUpRight className="h-3 w-3 text-zinc-600" />
+                </a>
+              </div>
+            </div>
 
             {/* Call To Action Buttons */}
             <div className="flex flex-wrap items-center gap-4">

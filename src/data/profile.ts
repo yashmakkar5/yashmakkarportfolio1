@@ -12,6 +12,8 @@ export interface ProfileData {
   portrait: string;
   portraitPlaceholder: boolean;
   contactEmail: string;
+  whatsappNumber: string;
+  whatsappUrl: string;
   location: string;
   currentRole: string;
   institution: string;
@@ -27,6 +29,8 @@ export const profileData: ProfileData = {
   portrait: "/images/yash-portrait.jpg",
   portraitPlaceholder: false,
   contactEmail: "yyaasshh555@gmail.com",
+  whatsappNumber: "+91 98888 88888", // Easily customized in src/data/profile.ts
+  whatsappUrl: "https://wa.me/919888888888?text=Hi%20Yash,%20saw%20your%20portfolio!",
   status: {
     text: "Building & Researching Multi-Agent Architectures",
     subtext: "B.E. CSE (AI & ML) Undergrad • CUIET",

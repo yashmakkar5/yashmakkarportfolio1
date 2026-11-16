@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUp, Github, Linkedin, Mail, Heart } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail, MessageCircle, Heart } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { CREDENTIALS_REPOSITORY_URL } from "@/data/certifications";
 
@@ -46,6 +46,15 @@ export default function Footer() {
                 title="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
+              </a>
+              <a
+                href={profileData.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-emerald-400 transition"
+                title="WhatsApp"
+              >
+                <MessageCircle className="h-4 w-4" />
               </a>
               <a
                 href={`mailto:${profileData.contactEmail}`}

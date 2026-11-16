@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight, Terminal } from "lucide-react";
+import { Menu, X, ArrowUpRight, MessageCircle, Github, Linkedin } from "lucide-react";
 import { profileData } from "@/data/profile";
 
 const navItems = [
@@ -93,13 +93,41 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Connect Button & Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          {/* Quick Connect Actions */}
+          <div className="flex items-center gap-2.5">
+            <a
+              href="https://github.com/yashmakkar5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex h-8 w-8 items-center justify-center rounded-full border border-zinc-800 bg-obsidian-900/80 text-zinc-400 hover:text-white hover:border-crimson-600 transition"
+              title="GitHub"
+            >
+              <Github className="h-3.5 w-3.5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yashmakkar5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex h-8 w-8 items-center justify-center rounded-full border border-zinc-800 bg-obsidian-900/80 text-zinc-400 hover:text-sky-400 hover:border-sky-500 transition"
+              title="LinkedIn"
+            >
+              <Linkedin className="h-3.5 w-3.5" />
+            </a>
+            <a
+              href={profileData.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-emerald-900/60 bg-emerald-950/40 px-3 py-1.5 text-xs font-mono font-medium text-emerald-300 backdrop-blur-sm transition-all duration-300 hover:bg-emerald-900/60 hover:text-emerald-100 hover:border-emerald-500 active:scale-95 shadow-[0_0_12px_rgba(16,185,129,0.2)]"
+              title="Chat on WhatsApp"
+            >
+              <MessageCircle className="h-3.5 w-3.5 text-emerald-400" />
+              <span>WhatsApp</span>
+            </a>
             <Link
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-crimson-600/50 bg-crimson-600/10 px-4 py-1.5 text-xs font-mono font-medium text-crimson-300 backdrop-blur-sm transition-all duration-300 hover:bg-crimson-600 hover:text-white hover:shadow-[0_0_20px_rgba(229,9,20,0.5)] active:scale-95"
+              className="inline-flex items-center gap-1.5 rounded-full border border-crimson-600/50 bg-crimson-600/10 px-3.5 py-1.5 text-xs font-mono font-medium text-crimson-300 backdrop-blur-sm transition-all duration-300 hover:bg-crimson-600 hover:text-white hover:shadow-[0_0_20px_rgba(229,9,20,0.5)] active:scale-95"
             >
-              <span>Initialize Contact</span>
+              <span>Connect</span>
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
 
